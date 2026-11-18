@@ -66,7 +66,8 @@
     <div class="form-card reveal">
       <h3>Tell me about your project</h3>
       <p class="fsub">Fill this in and choose how to send it, by email, or straight to my WhatsApp.</p>
-      <form id="bookFormEl" novalidate>
+      <form id="bookFormEl" name="booking" method="POST" data-netlify="true" data-netlify-honeypot="_honey" novalidate>
+        <input type="hidden" name="form-name" value="booking">
         <div class="f-row">
           <div class="f-group">
             <label for="fName">Your name <b>*</b></label>
@@ -249,7 +250,7 @@ function validate(d) {
   return true;
 }
 
-/* ============ SEND BY EMAIL (FormSubmit) ============ */
+/* ============ SEND BY EMAIL (Netlify Forms) ============ */
 form.addEventListener('submit', async e => {
   e.preventDefault();
   const d = collect();
@@ -257,19 +258,20 @@ form.addEventListener('submit', async e => {
   status.className = 'form-status show';
   status.innerHTML = 'Sending your request…';
   try {
-    const res = await fetch('https://formsubmit.co/ajax/thehungryvideographer@gmail.com', {
+    const body = new URLSearchParams({
+      'form-name': 'booking',
+      name: d.name,
+      email: d.email,
+      phone: d.phone || ', ',
+      service: d.service,
+      budget: d.budget || ', ',
+      date: d.date || ', ',
+      message: d.message
+    });
+    const res = await fetch('/', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-      body: JSON.stringify({
-        _subject: `🎬 New booking request: ${d.service}, ${d.name}`,
-        Name: d.name,
-        Email: d.email,
-        Phone: d.phone || ', ',
-        Service: d.service,
-        Budget: d.budget || ', ',
-        Start_date: d.date || ', ',
-        Message: d.message
-      })
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: body.toString()
     });
     if (!res.ok) throw new Error('send failed');
     status.className = 'form-status show';
