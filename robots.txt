@@ -1,6 +1,5 @@
 User-agent: *
 Allow: /
-Disallow: /login.html
-Disallow: /admin.html
+Disallow: /admin/
 
 Sitemap: https://muchuoclifford.netlify.app/sitemap.xml
