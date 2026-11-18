@@ -4,8 +4,3 @@
 
 [build.environment]
   NODE_VERSION = "20"
-
-[[headers]]
-  for = "/clear-cache.html"
-  [headers.values]
-    Clear-Site-Data = "\"cache\""
