@@ -127,5 +127,5 @@ if (yr) yr.textContent = new Date().getFullYear();
 
 /* ============ LOGIN → ADMIN SWAP ============ */
 document.querySelectorAll('.login-link').forEach(a => {
-  if (sessionStorage.getItem('thv_admin_ok') === '1') { a.textContent = 'Admin'; a.href = 'admin.html'; }
+  if (sessionStorage.getItem('thv_admin_ok') === '1') { a.textContent = 'Admin'; a.href = 'admin/'; }
 });
