@@ -1,0 +1,121 @@
+backend:
+  name: git-gateway
+  branch: main
+
+locale: en
+site_url: https://muchuoclifford.netlify.app
+display_url: https://muchuoclifford.netlify.app
+logo_url: https://muchuoclifford.netlify.app/favicon.svg
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: blog
+    label: Blog & Vlogs
+    label_singular: Post
+    description: Write an article or vlog. When you press Publish, the website updates automatically in about a minute.
+    folder: content/blog
+    create: true
+    delete: true
+    slug: "{{slug}}"
+    extension: json
+    format: json
+    identifier_field: title
+    summary: "{{title}}"
+    sortable_fields: ["date", "title"]
+    fields:
+      - label: Title
+        name: title
+        widget: string
+      - label: Publish date
+        name: date
+        widget: datetime
+        date_format: "YYYY-MM-DD"
+        time_format: false
+        format: "YYYY-MM-DD"
+      - label: Type
+        name: type
+        widget: select
+        default: article
+        options:
+          - label: Article
+            value: article
+          - label: Vlog
+            value: vlog
+      - label: Short description
+        name: excerpt
+        widget: text
+        hint: One or two sentences shown on the blog cards.
+      - label: Cover picture
+        name: image
+        widget: image
+        required: false
+      - label: Video link
+        name: youtube
+        widget: string
+        required: false
+        hint: Paste a YouTube, Vimeo, TikTok, Facebook, Instagram or Drive link. YouTube and Vimeo play inside the page, other platforms show a Watch button.
+      - label: Read time or label
+        name: read
+        widget: string
+        required: false
+        default: "5 min read"
+        hint: For example, 5 min read
+      - label: Tags
+        name: tags
+        widget: list
+        required: false
+      - label: Body
+        name: body
+        widget: markdown
+
+  - name: gallery
+    label: Gallery
+    description: Add pictures and video links to the Work page. Drag a project to change its position.
+    files:
+      - name: projects
+        label: Projects
+        file: content/gallery.json
+        fields:
+          - label: Projects
+            name: projects
+            widget: list
+            summary: "{{fields.title}}"
+            fields:
+              - label: Title
+                name: title
+                widget: string
+              - label: Category
+                name: cat
+                widget: select
+                options:
+                  - label: Video
+                    value: video
+                  - label: Events
+                    value: events
+                  - label: Photography
+                    value: photo
+                  - label: Design
+                    value: design
+                  - label: Online Safety
+                    value: safety
+              - label: Client
+                name: client
+                widget: string
+              - label: Badge text
+                name: badge
+                widget: string
+                required: false
+                hint: Small label on the picture, for example Events · Corporate
+              - label: Description
+                name: desc
+                widget: text
+              - label: Picture
+                name: img
+                widget: image
+              - label: Video link
+                name: videoUrl
+                widget: string
+                required: false
+                hint: YouTube or Vimeo link for a video project. Leave empty for a photo.

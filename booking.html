@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Book a Session, Get a Quote | The Hungry Videographer</title>
+<meta name="description" content="Book video editing, videography, event coverage, photography, graphic design, tech support or online safety training. I reply 24/7.">
+<link rel="canonical" href="https://muchuoclifford.netlify.app/booking.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Book a Session, The Hungry Videographer">
+<meta property="og:description" content="Tell me about your project, I reply 24/7.">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<div class="cursor" id="cursor"></div>
+
+<nav id="nav">
+  <a class="logo" href="index.html">
+    <span class="dot"></span>
+    <span class="stack"><b>MUCHUO·CLIFFORD</b><span>AKA The Hungry Videographer</span></span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="about.html">About</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="gallery.html">Work</a></li>
+    <li><a href="why-us.html">Why Us</a></li>
+    <li><a href="reviews.html">Reviews</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="admin/" class="login-link">Login</a></li>
+  </ul>
+  <a class="nav-cta" href="#bookForm">Book Now</a>
+  <button class="burger" id="burger" aria-label="menu"><span></span><span></span><span></span></button>
+</nav>
+<div class="mobile-menu" id="mmenu">
+  <a href="index.html"><span>00</span>Home</a>
+  <a href="about.html"><span>01</span>About</a>
+  <a href="services.html"><span>02</span>Services</a>
+  <a href="gallery.html"><span>03</span>Work</a>
+  <a href="why-us.html"><span>04</span>Why Us</a>
+  <a href="reviews.html"><span>05</span>Reviews</a>
+  <a href="blog.html"><span>06</span>Blog</a>
+  <a href="booking.html"><span>07</span>Book Now</a>
+  <a href="admin/"><span>08</span>Login</a>
+</div>
+
+<a class="wa-float" href="https://wa.me/237677980536" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+</a>
+
+<!-- PAGE HERO -->
+<header class="page-hero">
+  <div class="glow"></div>
+  <div class="kicker">Booking</div>
+  <h1>Ready to bring your<br><em>story to life?</em></h1>
+  <p class="lede">Tell me about your project below, <b>I reply 24/7</b>, every day including weekends and holidays. Prefer to talk? WhatsApp or call <b>+237 677 980 536</b>.</p>
+</header>
+
+<!-- BOOKING FORM -->
+<section id="bookForm">
+  <div class="book-grid">
+    <div class="form-card reveal">
+      <h3>Tell me about your project</h3>
+      <p class="fsub">Fill this in and choose how to send it, by email, or straight to my WhatsApp.</p>
+      <form id="bookFormEl" novalidate>
+        <div class="f-row">
+          <div class="f-group">
+            <label for="fName">Your name <b>*</b></label>
+            <input id="fName" name="name" type="text" placeholder="e.g. Grace Fon" required>
+          </div>
+          <div class="f-group">
+            <label for="fEmail">Email <b>*</b></label>
+            <input id="fEmail" name="email" type="email" placeholder="you@example.com" required>
+          </div>
+        </div>
+        <div class="f-row">
+          <div class="f-group">
+            <label for="fPhone">Phone / WhatsApp</label>
+            <input id="fPhone" name="phone" type="tel" placeholder="+237 6XX XXX XXX">
+          </div>
+          <div class="f-group">
+            <label for="fService">Service needed <b>*</b></label>
+            <select id="fService" name="service" required>
+              <option value="">Choose a service…</option>
+              <option value="Video Editing">Video Editing</option>
+              <option value="Videography">Videography</option>
+              <option value="Event Coverage">Event Coverage</option>
+              <option value="Photography">Photography</option>
+              <option value="Graphic Design">Graphic Design</option>
+              <option value="Tech Support">Tech Support</option>
+              <option value="Online Safety & Account Recovery">Online Safety & Account Recovery</option>
+              <option value="Digital Strategy">Digital Strategy</option>
+              <option value="Other / Not sure yet">Other / Not sure yet</option>
+            </select>
+          </div>
+        </div>
+        <div class="f-row">
+          <div class="f-group">
+            <label for="fBudget">Budget range (XAF)</label>
+            <select id="fBudget" name="budget">
+              <option value="">Prefer not to say</option>
+              <option value="Under 25,000">Under 25,000</option>
+              <option value="25,000, 75,000">25,000, 75,000</option>
+              <option value="75,000, 150,000">75,000, 150,000</option>
+              <option value="150,000, 300,000">150,000, 300,000</option>
+              <option value="300,000+">300,000+</option>
+            </select>
+          </div>
+          <div class="f-group">
+            <label for="fDate">Preferred start date</label>
+            <input id="fDate" name="date" type="date">
+          </div>
+        </div>
+        <div class="f-group">
+          <label for="fMsg">Tell me about your project <b>*</b></label>
+          <textarea id="fMsg" name="message" placeholder="What are we making? Goals, audience, deadline, location…" required></textarea>
+        </div>
+        <!-- honeypot (spam trap) -->
+        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+        <div class="form-actions">
+          <button type="submit" class="btn btn-solid">Send request <span class="arr">→</span></button>
+          <button type="button" class="btn btn-wa" id="waSend">Send via WhatsApp</button>
+        </div>
+        <div class="form-status" id="formStatus"></div>
+      </form>
+    </div>
+
+    <aside class="book-side">
+      <div class="side-card reveal">
+        <h3>What happens next</h3>
+        <ul>
+          <li>I read your message and reply within hours, 24/7, even on weekends.</li>
+          <li>We clarify goals, audience, budget and deadline.</li>
+          <li>You receive a quote, ideas, shot list or design direction.</li>
+          <li>We create, review together, and deliver final files.</li>
+        </ul>
+      </div>
+      <div class="side-card reveal">
+        <h3>Prefer to talk first?</h3>
+        <p>Call or WhatsApp me directly, it goes straight to me, not an assistant.</p>
+        <p><a class="inline" href="https://wa.me/237677980536" target="_blank" rel="noopener">WhatsApp +237 677 980 536</a></p>
+        <p><a class="inline" href="tel:+237677980536">Call now</a> · <a class="inline" href="mailto:thehungryvideographer@gmail.com">Email me</a></p>
+      </div>
+      <div class="side-card reveal">
+        <h3>Trusted by</h3>
+        <p>100+ small businesses · 20+ NGOs · 700+ youths trained · 20+ accounts recovered</p>
+        <p style="color:var(--acc);font-weight:500">Open 24/7, every day, including weekends and holidays.</p>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="foot-grid">
+    <div class="foot-brand">
+      <a class="logo" href="index.html">
+        <span class="dot"></span>
+        <span class="stack"><b>MUCHUO·CLIFFORD</b><span>AKA The Hungry Videographer</span></span>
+      </a>
+      <p>Video editing, videography, photography, graphic design, tech support, online safety and account recovery.</p>
+    </div>
+    <div class="foot-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="gallery.html">My Work</a></li>
+        <li><a href="blog.html">Blogs & Vlogs</a></li>
+        <li><a href="booking.html">Book Now</a></li>
+      </ul>
+    </div>
+    <div class="foot-col">
+      <h4>Resources</h4>
+      <ul>
+        <li><a href="why-us.html">Why Us</a></li>
+        <li><a href="reviews.html">Reviews</a></li>
+        <li><a href="testimonials.html">Testimonies</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="blog.html">Safety Tips</a></li>
+        <li><a href="booking.html">Get a Quote</a></li>
+      </ul>
+    </div>
+    <div class="foot-col">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="tel:+237677980536">+237 677 980 536</a></li>
+        <li><a href="mailto:thehungryvideographer@gmail.com">thehungryvideographer@gmail.com</a></li>
+        <li><a href="https://wa.me/237677980536" target="_blank" rel="noopener">WhatsApp</a></li>
+      </ul>
+      <p style="color:var(--muted);font-size:.8rem;margin-top:16px">Open 24/7, every day, including weekends and holidays.</p>
+    </div>
+  </div>
+  <div class="foot-bottom">
+    <span>© <span id="year">2026</span> Muchuo Clifford, The Hungry Videographer</span>
+    <span>Video · Photo · Design · Safety · Strategy</span>
+    <button class="top-btn" onclick="window.scrollTo({top:0,behavior:'smooth'})">Back to top ↑</button>
+  </div>
+</footer>
+
+<script src="js/main.js" defer></script>
+<script defer>
+/* preselect service from ?service= */
+const svcMap = {
+  'video-editing': 'Video Editing',
+  'videography': 'Videography',
+  'event-coverage': 'Event Coverage',
+  'photography': 'Photography',
+  'graphic-design': 'Graphic Design',
+  'tech-support': 'Tech Support',
+  'online-safety-training': 'Online Safety & Account Recovery',
+  'online-safety-recovery': 'Online Safety & Account Recovery',
+  'digital-strategy': 'Digital Strategy'
+};
+const wanted = svcMap[new URLSearchParams(location.search).get('service')];
+if (wanted) document.getElementById('fService').value = wanted;
+
+const form = document.getElementById('bookFormEl');
+const status = document.getElementById('formStatus');
+
+function collect() {
+  const d = {
+    name: document.getElementById('fName').value.trim(),
+    email: document.getElementById('fEmail').value.trim(),
+    phone: document.getElementById('fPhone').value.trim(),
+    service: document.getElementById('fService').value,
+    budget: document.getElementById('fBudget').value,
+    date: document.getElementById('fDate').value,
+    message: document.getElementById('fMsg').value.trim()
+  };
+  return d;
+}
+
+function validate(d) {
+  if (!d.name || !d.email || !d.service || !d.message) {
+    status.className = 'form-status error show';
+    status.innerHTML = 'Please fill in your <b>name</b>, <b>email</b>, <b>service</b> and <b>project description</b>.';
+    return false;
+  }
+  if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(d.email)) {
+    status.className = 'form-status error show';
+    status.innerHTML = 'That email address doesn\u2019t look right, please check it.';
+    return false;
+  }
+  return true;
+}
+
+/* ============ SEND BY EMAIL (FormSubmit) ============ */
+form.addEventListener('submit', async e => {
+  e.preventDefault();
+  const d = collect();
+  if (!validate(d)) return;
+  status.className = 'form-status show';
+  status.innerHTML = 'Sending your request…';
+  try {
+    const res = await fetch('https://formsubmit.co/ajax/thehungryvideographer@gmail.com', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify({
+        _subject: `🎬 New booking request: ${d.service}, ${d.name}`,
+        Name: d.name,
+        Email: d.email,
+        Phone: d.phone || ', ',
+        Service: d.service,
+        Budget: d.budget || ', ',
+        Start_date: d.date || ', ',
+        Message: d.message
+      })
+    });
+    if (!res.ok) throw new Error('send failed');
+    status.className = 'form-status show';
+    status.innerHTML = `<b>Message sent ✅</b><br>Thank you ${d.name}, I've received your request and I'll reply within hours. For anything urgent, <a href="https://wa.me/237677980536" target="_blank" rel="noopener" style="color:var(--acc)">WhatsApp me</a>.`;
+    form.reset();
+  } catch (err) {
+    status.className = 'form-status error show';
+    status.innerHTML = `Couldn't send by email right now. Please use <b>Send via WhatsApp</b> instead, or email me directly at <a href="mailto:thehungryvideographer@gmail.com" style="color:var(--acc)">thehungryvideographer@gmail.com</a>.`;
+  }
+});
+
+/* ============ SEND VIA WHATSAPP ============ */
+document.getElementById('waSend').addEventListener('click', () => {
+  const d = collect();
+  if (!validate(d)) return;
+  const lines = [
+    '🎬 *New booking request*',
+    '*Name:* ' + d.name,
+    '*Email:* ' + d.email,
+    '*Phone:* ' + (d.phone || ', '),
+    '*Service:* ' + d.service,
+    '*Budget:* ' + (d.budget || ', '),
+    '*Start date:* ' + (d.date || ', '),
+    '',
+    '*Project:* ' + d.message
+  ];
+  window.open('https://wa.me/237677980536?text=' + encodeURIComponent(lines.join('\n')), '_blank');
+  status.className = 'form-status show';
+  status.innerHTML = 'WhatsApp opened with your request pre-filled, just hit <b>send</b> there. ✅';
+});
+</script>
+</body>
+</html>

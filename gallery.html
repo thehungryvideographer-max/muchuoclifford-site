@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Work, Gallery | The Hungry Videographer</title>
+<meta name="description" content="Videos, photos and designs created for brands, events and causes, business summits, documentaries, music videos, headshots, brand identities and more.">
+<link rel="canonical" href="https://muchuoclifford.netlify.app/gallery.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="My Work, The Hungry Videographer">
+<meta property="og:description" content="Videos, photos and designs created for brands, events and causes.">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<div class="cursor" id="cursor"></div>
+
+<nav id="nav">
+  <a class="logo" href="index.html">
+    <span class="dot"></span>
+    <span class="stack"><b>MUCHUO·CLIFFORD</b><span>AKA The Hungry Videographer</span></span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="about.html">About</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="gallery.html">Work</a></li>
+    <li><a href="why-us.html">Why Us</a></li>
+    <li><a href="reviews.html">Reviews</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="admin/" class="login-link">Login</a></li>
+  </ul>
+  <a class="nav-cta" href="booking.html">Book Now</a>
+  <button class="burger" id="burger" aria-label="menu"><span></span><span></span><span></span></button>
+</nav>
+<div class="mobile-menu" id="mmenu">
+  <a href="index.html"><span>00</span>Home</a>
+  <a href="about.html"><span>01</span>About</a>
+  <a href="services.html"><span>02</span>Services</a>
+  <a href="gallery.html"><span>03</span>Work</a>
+  <a href="why-us.html"><span>04</span>Why Us</a>
+  <a href="reviews.html"><span>05</span>Reviews</a>
+  <a href="blog.html"><span>06</span>Blog</a>
+  <a href="booking.html"><span>07</span>Book Now</a>
+  <a href="admin/"><span>08</span>Login</a>
+</div>
+
+<a class="wa-float" href="https://wa.me/237677980536" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+</a>
+
+<!-- PAGE HERO -->
+<header class="page-hero">
+  <div class="glow"></div>
+  <div class="kicker">My Past Work</div>
+  <h1>Videos, photos & designs<br><em>for real causes</em></h1>
+  <p class="lede">Created for <b>brands, events and causes</b>. Click any project to view it larger, video projects play right here in the page.</p>
+</header>
+
+<!-- GALLERY -->
+<section>
+  <div class="filters" id="filters"></div>
+  <div class="work-grid" id="grid"></div>
+  <div class="work-cta reveal">
+    <p>Want work like this? Tell me about your project, your brand, event or cause could be featured here next.</p>
+    <a class="btn btn-solid" href="booking.html">Book a session <span class="arr">→</span></a>
+  </div>
+</section>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true">
+  <div class="lb-inner">
+    <button class="lb-close" id="lbClose" aria-label="Close">✕</button>
+    <button class="lb-nav lb-prev" id="lbPrev" aria-label="Previous">←</button>
+    <button class="lb-nav lb-next" id="lbNext" aria-label="Next">→</button>
+    <div class="lb-media" id="lbMedia"></div>
+    <div class="lb-meta">
+      <div>
+        <span class="cat" id="lbCat"></span>
+        <h3 id="lbTitle"></h3>
+        <p id="lbDesc"></p>
+      </div>
+      <a class="btn btn-ghost" href="booking.html">Book similar</a>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="foot-grid">
+    <div class="foot-brand">
+      <a class="logo" href="index.html">
+        <span class="dot"></span>
+        <span class="stack"><b>MUCHUO·CLIFFORD</b><span>AKA The Hungry Videographer</span></span>
+      </a>
+      <p>Video editing, videography, photography, graphic design, tech support, online safety and account recovery.</p>
+    </div>
+    <div class="foot-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="gallery.html">My Work</a></li>
+        <li><a href="blog.html">Blogs & Vlogs</a></li>
+        <li><a href="booking.html">Book Now</a></li>
+      </ul>
+    </div>
+    <div class="foot-col">
+      <h4>Resources</h4>
+      <ul>
+        <li><a href="why-us.html">Why Us</a></li>
+        <li><a href="reviews.html">Reviews</a></li>
+        <li><a href="testimonials.html">Testimonies</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="blog.html">Safety Tips</a></li>
+        <li><a href="booking.html">Get a Quote</a></li>
+      </ul>
+    </div>
+    <div class="foot-col">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="tel:+237677980536">+237 677 980 536</a></li>
+        <li><a href="mailto:thehungryvideographer@gmail.com">thehungryvideographer@gmail.com</a></li>
+        <li><a href="https://wa.me/237677980536" target="_blank" rel="noopener">WhatsApp</a></li>
+      </ul>
+      <p style="color:var(--muted);font-size:.8rem;margin-top:16px">Open 24/7, every day, including weekends and holidays.</p>
+    </div>
+  </div>
+  <div class="foot-bottom">
+    <span>© <span id="year">2026</span> Muchuo Clifford, The Hungry Videographer</span>
+    <span>Video · Photo · Design · Safety · Strategy</span>
+    <button class="top-btn" onclick="window.scrollTo({top:0,behavior:'smooth'})">Back to top ↑</button>
+  </div>
+</footer>
+
+<script src="js/gallery-data.js"></script>
+<script src="js/main.js" defer></script>
+<script defer>
+/* ============ RENDER GALLERY ============ */
+const grid = document.getElementById('grid');
+const filtersEl = document.getElementById('filters');
+let activeFilter = 'all';
+let visible = [];
+
+function renderFilters() {
+  Object.entries(CAT_LABELS).forEach(([key, label], i) => {
+    const b = document.createElement('button');
+    b.textContent = label;
+    b.dataset.f = key;
+    if (key === 'all') b.classList.add('active');
+    b.addEventListener('click', () => {
+      filtersEl.querySelectorAll('button').forEach(x => x.classList.remove('active'));
+      b.classList.add('active');
+      activeFilter = key;
+      applyFilter();
+    });
+    filtersEl.appendChild(b);
+  });
+}
+
+function renderCards() {
+  PROJECTS.forEach(pr => {
+    const card = document.createElement('article');
+    card.className = 'card reveal';
+    card.dataset.cat = pr.cat;
+    card.innerHTML = `
+      <div class="thumb"><img class="bgimg" src="${pr.img}" alt="${pr.title}" loading="lazy" onerror="this.remove()"></div>
+      <span class="badge">${pr.badge}</span>
+      ${pr.videoUrl
+        ? '<span class="play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>'
+        : '<span class="zoom">⤢</span>'}
+      <div class="info"><h3>${pr.title}</h3><span>${pr.client}</span></div>`;
+    card.addEventListener('click', () => openLB(pr));
+    grid.appendChild(card);
+  });
+  observeReveals();
+}
+
+function applyFilter() {
+  visible = [];
+  grid.querySelectorAll('.card').forEach((c, i) => {
+    const show = activeFilter === 'all' || c.dataset.cat === activeFilter;
+    c.classList.toggle('hide', !show);
+    if (show) visible.push(PROJECTS[i]);
+  });
+}
+
+/* ============ LIGHTBOX ============ */
+const lb = document.getElementById('lightbox');
+const lbMedia = document.getElementById('lbMedia');
+let currentIdx = 0;
+
+function ytEmbed(url) {
+  let m = url.match(/(?:youtube\.com\/(?:watch\?v=|embed\/|shorts\/|live\/)|youtu\.be\/)([\w-]{6,})/);
+  if (m) return `https://www.youtube-nocookie.com/embed/${m[1]}?rel=0&autoplay=1`;
+  m = url.match(/vimeo\.com\/(?:video\/)?(\d+)/);
+  if (m) return `https://player.vimeo.com/video/${m[1]}?autoplay=1`;
+  return null;
+}
+
+function showProject(i) {
+  if (!visible.length) return;
+  currentIdx = ((i % visible.length) + visible.length) % visible.length;
+  const pr = visible[currentIdx];
+  const embed = pr.videoUrl ? ytEmbed(pr.videoUrl) : null;
+  lbMedia.innerHTML = embed
+    ? `<iframe src="${embed}" title="${pr.title}" allow="accelerometer; autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>`
+    : pr.videoUrl
+      ? `<div style="position:relative;display:grid;place-items:center;background:linear-gradient(135deg,#141419,#1c1426);width:100%;height:100%"><img src="${pr.img}" alt="${pr.title}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.4"><a class="btn btn-solid" href="${pr.videoUrl}" target="_blank" rel="noopener" style="z-index:2">▶ Watch the video</a></div>`
+      : `<img src="${pr.img}" alt="${pr.title}">`;
+  document.getElementById('lbCat').textContent = pr.badge;
+  document.getElementById('lbTitle').textContent = pr.title;
+  document.getElementById('lbDesc').textContent = pr.desc;
+}
+
+function openLB(pr) {
+  applyFilter();
+  const i = visible.findIndex(p => p.id === pr.id);
+  showProject(i < 0 ? 0 : i);
+  lb.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeLB() {
+  lb.classList.remove('open');
+  lbMedia.innerHTML = '';
+  document.body.style.overflow = 'auto';
+}
+
+document.getElementById('lbClose').addEventListener('click', closeLB);
+lb.addEventListener('click', e => { if (e.target === lb) closeLB(); });
+addEventListener('keydown', e => {
+  if (!lb.classList.contains('open')) return;
+  if (e.key === 'Escape') closeLB();
+  if (e.key === 'ArrowLeft') showProject(currentIdx - 1);
+  if (e.key === 'ArrowRight') showProject(currentIdx + 1);
+});
+document.getElementById('lbPrev').addEventListener('click', () => showProject(currentIdx - 1));
+document.getElementById('lbNext').addEventListener('click', () => showProject(currentIdx + 1));
+
+/* ============ INIT ============ */
+renderFilters();
+renderCards();
+applyFilter();
+function observeReveals() {
+  const io2 = new IntersectionObserver(es => es.forEach(e => {
+    if (e.isIntersecting) { e.target.classList.add('in'); io2.unobserve(e.target); }
+  }), { threshold: .1 });
+  grid.querySelectorAll('.card').forEach(el => io2.observe(el));
+}
+</script>
+</body>
+</html>
